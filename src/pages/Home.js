@@ -1,5 +1,5 @@
 import './Home.css';
-import NavigationBar from './NavigationBar';
+import NavigationBar from '../NavigationBar';
 
 function Home() {
   return (

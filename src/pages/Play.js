@@ -1,10 +1,10 @@
+import NavigationBar from "../NavigationBar";
 import "./Play.css"
 
 function Play() {
     return (
         <div className="App">
-            <div className="Navigation-Bar">
-            </div>
+            <NavigationBar />
         </div>
     );
 }

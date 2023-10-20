@@ -1,5 +1,5 @@
 import "./Leaderboard.css"
-import NavigationBar from "./NavigationBar";
+import NavigationBar from "../NavigationBar";
 
 function Leaderboard() {
     return (
