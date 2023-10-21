@@ -16,7 +16,6 @@
 .form-field-title {
     color: #BAC9FF;
     text-align: center;
-    padding-bottom: 100px;
     background-color: #303030;
 }
 
@@ -54,4 +53,13 @@
 .register-form button {
     width: 100px;
     cursor: pointer;
+}
+
+.submit-button {
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    margin-bottom: -40px;
+    flex-direction: column;
+    background-color: #303030;
 }

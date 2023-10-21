@@ -13,13 +13,6 @@
     background-color: #303030;
 }
 
-.form-field-title {
-    color: #BAC9FF;
-    text-align: center;
-    padding-bottom: 100px;
-    background-color: #303030;
-}
-
 .login-form {
     display: flex;
     padding: 10px;

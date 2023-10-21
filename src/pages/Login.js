@@ -83,12 +83,13 @@ function Login() {
                             <p className="error">Password must be atleast 3 characters!</p> : null
                         }
 
-                        <p className="to-register">
-                            Don't have an account?
-                            <a href="/register"> Register</a>
-                        </p>
-
-                        <button className="form-field" type="submit">Login</button>
+                        <div className="submit-button">
+                            <p className="to-register">
+                                Don't have an account?{' '}
+                                <a href="/register"> Register</a>
+                            </p>
+                            <button className="form-field" type="submit">Login</button>
+                        </div>
 
                         {submitted && error.length > 0 ?
                             <p className="error">{error}</p> : null

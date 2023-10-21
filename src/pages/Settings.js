@@ -2,11 +2,11 @@ import "./Settings.css"
 import axios from "axios";
 import NavigationBar from "../NavigationBar";
 import { UserState } from "../context/User";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Settings() {
-    let image = null;
+    let image = useRef(null);
 
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
@@ -28,12 +28,12 @@ function Settings() {
             setUser(response.data);
 
             if (response.data.profile_picture_url !== '') {
-                image = await axios.get(response.data.profile_picture_url).data;
+                image.current = await axios.get(response.data.profile_picture_url).data;
             }
         }
 
         fetchData();
-    }, []);
+    }, [navigate]);
 
     return (
         <div>
@@ -46,8 +46,8 @@ function Settings() {
                 {user ? (
                     <div className="profile">
                         <div className="basic-profile">
-                            {image ? (
-                                <img className="basic-profile-image" src={image} alt="pfp"></img>
+                            {image.current ? (
+                                <img className="basic-profile-image" src={image.current} alt="pfp"></img>
                             ) : (
                                 <img className="basic-profile-image-null" src={null} alt=""></img>
                             )}
@@ -57,10 +57,12 @@ function Settings() {
                             <label for="select-image-file" className="select-image-file-label">Select Image</label>
                         </div>
 
-                        <p>Username : {user.username}</p>
-                        <p>ELO      : {user.elo_points}</p>
-                        <p>Country  : {user.country_id}</p>
-                        <br></br>
+                        <div className="settings-fields-container">
+                            <div className="settings-fields">
+                                <label className="settings-field">Username</label>
+                                <input type="text" placeholder="Username" className="settings-field" value={UserState.username}></input>
+                            </div>
+                        </div>
 
                         {JSON.stringify(user)}
                     </div>

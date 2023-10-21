@@ -15,7 +15,7 @@
 }
 
 .settings-container h1 {
-    color: white;
+    color: #BAC9FF;
 }
 
 .loader-container {
@@ -50,7 +50,6 @@
     padding-top: 50px;
     place-items: center;
     flex-direction: column;
-    background-color: #303030;
     grid-template-columns: repeat(2, 1);
 }
 
@@ -101,5 +100,22 @@
 
 .change-profile-picture-label {
     margin-bottom: 10px;
+}
+
+.settings-fields-container {
+    border: 1px solid #fff;
+}
+
+.settings-fields {
+    display: flex;
+    align-items: center;
+    background-color: #303030;
+}
+
+.settings-field {
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #303030;
 }

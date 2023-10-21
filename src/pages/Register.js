@@ -99,7 +99,9 @@ function Register() {
                             <p className="error">Password mismatch!</p> : null
                         }
 
-                        <button className="form-field" type="submit">Register</button>
+                        <div className="submit-button">
+                            <button className="form-field" type="submit">Register</button>
+                        </div>
 
                         {submitted && error.length > 0 ?
                             <p className="error">{error}</p> : null
