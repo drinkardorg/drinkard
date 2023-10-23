@@ -1,0 +1,95 @@
+.play-container {
+    color: white;
+    border: 1px solid white;
+    margin: 100px;
+    border-radius: 30px;
+    background-color: #505050;
+}
+
+.quick-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finding-match-label,
+.quick-play-button {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 30px;
+    margin-top: 40px;
+    border-radius: 30px;
+    background-color: #404040;
+}
+
+.quick-play-button:hover {
+    background-color: #303030;
+}
+
+.opponent-info,
+.your-info {
+    border: 1px solid white;
+    display: flex;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    background-color: #303030;
+}
+
+.opponent-info-field,
+.your-info-field {
+    color: #BAC9FF;
+    font-size: 30px;
+    margin-left: 10px;
+    background-color: #303030;
+}
+
+.board {
+    height: 600px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #808080;
+}
+
+.yourcards,
+.enemycards {
+    display: flex;
+    /* flex-direction: column; */
+    /* grid-template-columns: repeat(1, 1fr); */
+    background-color: #404040;
+}
+
+.card1,
+.card2,
+.selectedcardexist {
+    width: 101.5px;
+    height: 144px;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    background-size: 1319.5px 720px;
+    background-image: url('../assets/cards.png');
+}
+
+.card2:hover {
+    border: 2px solid black;
+}
+
+.selectedcard {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: #808080;
+}
+
+.selectedcardexist,
+.selectedcardnone {
+    width: 101.5px;
+    height: 144px;
+    background-color: #808080;
+}

@@ -60,7 +60,7 @@ function Login() {
                     <h1 className="form-field-title">Login</h1>
                     <form className="login-form" onSubmit={onLoginButtonClicked}>
                         <input
-                            class="form-field"
+                            className="form-field"
                             type="text"
                             placeholder="Username"
                             name="username"
@@ -72,7 +72,7 @@ function Login() {
                         }
 
                         <input
-                            class="form-field"
+                            className="form-field"
                             type="password"
                             placeholder="Password"
                             name="password"
@@ -89,11 +89,11 @@ function Login() {
                                 <a href="/register"> Register</a>
                             </p>
                             <button className="form-field" type="submit">Login</button>
-                        </div>
 
-                        {submitted && error.length > 0 ?
-                            <p className="error">{error}</p> : null
-                        }
+                            {submitted && error.length > 0 ?
+                                <p className="error">Invalid username or password</p> : null
+                            }
+                        </div>
                     </form>
                 </div>
             </div>

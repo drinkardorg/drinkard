@@ -1,8 +1,7 @@
 class User {
-    constructor(username, password, eloPoints) {
+    constructor(username, password) {
         this.username = username;
         this.password = password;
-        this.eloPoints = eloPoints;
     }
 }
 

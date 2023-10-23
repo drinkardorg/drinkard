@@ -25,6 +25,15 @@ function Settings() {
             };
 
             let response = await axios.post(url, body);
+            console.clear();
+            console.log(response);
+            if (response.data.err !== undefined) {
+                navigate("/login");
+                UserState.username = '';
+                UserState.password = '';
+                return;
+            }
+
             setUser(response.data);
 
             if (response.data.profile_picture_url !== '') {
@@ -64,11 +73,11 @@ function Settings() {
                             </div>
                         </div>
 
-                        {JSON.stringify(user)}
+                        {/* {JSON.stringify(user)} */}
                     </div>
                 ) : (
-                    <div class="loader-container">
-                        <div class="loader"></div>
+                    <div className="loader-container">
+                        <div className="loader"></div>
                     </div>
                 )}
             </div>

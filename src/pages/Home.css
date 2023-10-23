@@ -1,0 +1,45 @@
+.container1,
+.container2 {
+    color: white;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container2 {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.drinkard-title {
+    color: white;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.container1 img {
+    width: 200px;
+}
+
+.container1 button {
+    color: white;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.play-now-button button {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: #000;
+}
+
+.play-now-button button:hover {
+    background-color: #303030;
+}
